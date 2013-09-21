@@ -1,4 +1,4 @@
-_bindings = require './build/Release/dcrypt'
+_bindings = require './build/Release/dcrypt.node'
 
 #OpenSSL bindings for Node.js. This module extends what is in node-crypto bringing much needed additional functionality.
 Random = _bindings.Random
