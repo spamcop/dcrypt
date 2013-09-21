@@ -1,4 +1,4 @@
-_bindings = require './build/default/dcrypt'
+_bindings = require './build/Release/dcrypt'
 
 #OpenSSL bindings for Node.js. This module extends what is in node-crypto bringing much needed additional functionality.
 Random = _bindings.Random
@@ -63,12 +63,12 @@ exports.keypair.newECDSA = (curve) ->
   return (new KeyPair).newECDSA(curve)
 
 # parseECDSA parses the raw ECDSA parameters from a PEM file's contents
-exports.keypair.parseECDSA = (filename, public) ->
-  return (new KeyPair).parseECDSA(filename, public)
+exports.keypair.parseECDSA = (filename, pub) ->
+  return (new KeyPair).parseECDSA(filename, pub)
 
 # parseRSA parses the raw RSA parameters from a PEM file's contents
-exports.keypair.parseRSA = (filename, public) ->
-  return (new KeyPair).parseRSA(filename, public)
+exports.keypair.parseRSA = (filename, pub) ->
+  return (new KeyPair).parseRSA(filename, pub)
 
 dcrypt.encode = Encode
 exports.encode = {}
